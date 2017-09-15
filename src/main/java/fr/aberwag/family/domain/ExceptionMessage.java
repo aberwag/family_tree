@@ -1,8 +1,10 @@
 package fr.aberwag.family.domain;
 
 import lombok.Builder;
+import lombok.Data;
 
 @Builder
+@Data
 public class ExceptionMessage {
 
 	private String message;

@@ -2,6 +2,8 @@ package fr.aberwag.family.exception;
 
 public class FamilyBusinessException extends FamilyException {
 
+	private static final long serialVersionUID = -7530836555977442828L;
+
 	public FamilyBusinessException() {
 		super();
 	}

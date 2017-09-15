@@ -1,20 +1,16 @@
 package fr.aberwag.family.controller;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import fr.aberwag.family.domain.ExceptionMessage;
 import fr.aberwag.family.domain.Membre;
 import fr.aberwag.family.exception.FamilyBusinessException;
-import fr.aberwag.family.exception.FamilyExceptionHandlerControllerAdvice;
 import fr.aberwag.family.services.MembreManagmentService;
 
 @RestController
@@ -49,15 +45,5 @@ public class MembreManagmentController {
 	public List<Membre> getAllActiveMembre() {
 		throw new FamilyBusinessException();
 		// return membreManagmentService.getAllActifMembre();
-	}
-
-	@ExceptionHandler(FamilyBusinessException.class)
-	public ExceptionMessage familyBusinessException(FamilyBusinessException exception) {
-		ExceptionMessage message = ExceptionMessage.builder()
-				.date(LocalDateTime.now().format(FamilyExceptionHandlerControllerAdvice.formatter))
-				.className(exception.getClass().getName()).message("message d'erreur geré par @ExceptionHandler")
-				.build();
-
-		return message;
 	}
 }
