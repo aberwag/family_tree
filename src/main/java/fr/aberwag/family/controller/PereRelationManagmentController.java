@@ -9,9 +9,11 @@ import org.springframework.web.bind.annotation.RestController;
 
 import fr.aberwag.family.domain.Membre;
 import fr.aberwag.family.services.PereRelationmanagmenetService;
+import lombok.extern.slf4j.Slf4j;
 
 @RestController
 @RequestMapping("/pere")
+@Slf4j
 public class PereRelationManagmentController {
 
 	@Autowired

@@ -6,9 +6,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
 import fr.aberwag.family.domain.Membre;
+import lombok.extern.slf4j.Slf4j;
 
 @RestController
 @RequestMapping("/photos")
+@Slf4j
 public class PhotosManagmentController {
 
 	@Autowired

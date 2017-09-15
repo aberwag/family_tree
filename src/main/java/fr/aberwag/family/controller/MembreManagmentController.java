@@ -12,9 +12,11 @@ import org.springframework.web.bind.annotation.RestController;
 import fr.aberwag.family.domain.Membre;
 import fr.aberwag.family.exception.FamilyBusinessException;
 import fr.aberwag.family.services.MembreManagmentService;
+import lombok.extern.slf4j.Slf4j;
 
 @RestController
 @RequestMapping("/membre")
+@Slf4j
 public class MembreManagmentController {
 
 	@Autowired

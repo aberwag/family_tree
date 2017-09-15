@@ -8,9 +8,11 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import fr.aberwag.family.domain.Membre;
+import lombok.extern.slf4j.Slf4j;
 
 @RestController
 @RequestMapping("/conjoint")
+@Slf4j
 public class ConjointRelationManagmentController {
 
 	@Autowired
